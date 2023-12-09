@@ -31,7 +31,7 @@ cnms <- colnames(counts)
 cp <- c('S1sp', 'S1L1dp', 'L1sp')
 ids <- paste0('Y0', sub('_.*', '', cnms))
 cds <- c('C2', 'C1')[as.integer(factor(sub('[^_]+_([^_]+)_.*', '\\1', cnms), levels=c('5', '8')))]
-cps <- cp[as.integer(factor(sub('.*_', '', cnms), levels=paste0('P', 9:12)))]
+cps <- cp[as.integer(factor(sub('.*_', '', cnms), levels=paste0('P', 9:11)))]
 colnames(counts) <- paste(ids, cps, cds, sep='_')
 info <- data.frame(IDs = ids, CDs = cds, CPs = cps)
 rownames(info) <- cnms
